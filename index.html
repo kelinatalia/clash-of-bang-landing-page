@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of BaNG | Fantasy Strategic Command</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Poppins:wght@700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="main-header">
+        <div class="header-container">
+            <div class="logo">Clash of BaNG</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="troops.html">Troops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-container" id="forge-your-legacy">
+            <div class="hero-bg-layers">
+                <div class="hero-bg-layer active" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZQTg3jKn1MTD1YnuyJW0HTt3tSPxshPzr_8mQXDdbIbbciY-94nJsScGHLq_kbafHbr1xsYXATh1dMYURwUUI1ORIl8jfC2S-XLKvE6wbhLTv1b8XUeXgdsylJofpzJEjwW5OhhA77PJEnJVsSUBSICFXGFpzXPo2OdSybanPLHLcgwdl8S0-3N1yiQyOj_XgIPJE-_6EkpluJd4DCe0Hji5yLCVbuDVVJ1OUSl9u4Jk6iDY6kkOEzw1uLfln0ElxbksYzZdSfoc');"></div>
+                <div class="hero-bg-layer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZdpDUflpcVjGe4MGwbXaVXBet3tBReC_Cco1kl8_GuyWGEJgS7P0pWALHDMLgtI_S1_LQUN90QZK8LDUUcKMWoevY9cy2L--D79hqnVKJPaqJyQu6sRlz7V9PZ2HudSnPJcgB9lCAu8eax4n5lPgZLLlwQ3MLtVDneRXkdv8nwG5_7Y2pmpUYCSOBTla7srBMEb2OtloG0vpAywYOQnf_vE6VWbOTvmsk0loSoKAA6lf75OLN0QRD7ZkneemolMP9JkU8yGKA6ik');"></div>
+                <div class="hero-bg-layer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy9CBN0QWnT3KWWpEaICncMfX1OqqQW0ZgIHVTztu8BiEJFhJtg4XaHmx1Rp8oYNTu_u8KfpTiKLTHbu3s7LjKaK2jooTl4jZfN_EeFg8_qMkwAIFsYeE6ppfWjX3mTOhO5Gbfb3v5uSBjjV3YbwTFkoWWWorcd-YSMhOjXJ-FAtlKaPMWhdWLgukfdntq0ZB53FFCLNra_slLVRPlutCKiHlqaxy96kq6ghoXyJtP9lYZQmzAqy18_ebABYEHJLBqtv2aqJBoC9s');"></div>
+            </div>
+            <div class="hero-gradient-overlay"></div>
+            <div class="hero-content-block">
+                <h1>FORGE YOUR <span class="text-purple">LEGACY</span></h1>
+                <p>Master the art of tactical warfare in a world where strategy meets dark fantasy. Command elite troops, build impenetrable fortresses, and dominate the BaNG arena.</p>
+                <div class="hero-action-buttons">
+                    <a href="register.html" class="btn-cta-solid">Join the Clan</a>
+                    <a href="troops.html" class="btn-cta-outline">Explore Troops</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>SCROLL TO COMMAND</span>
+                <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+            </div>
+        </section>
+
+        <section class="news-carousel-section">
+            <div class="section-flex-header">
+                <div class="header-title-group">
+                    <div class="title-accent-line"></div>
+                    <h2>Latest News</h2>
+                </div>
+                <div class="carousel-navigation-buttons">
+                    <button id="carousel-prev" class="btn-nav-arrow"><span class="material-symbols-outlined">chevron_left</span></button>
+                    <button id="carousel-next" class="btn-nav-arrow"><span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <div class="carousel-view-window">
+                <div class="carousel-scroll-track" id="carousel-track-wrapper">
+                    <div class="carousel-flex-list" id="carousel-track">
+                        <div class="carousel-item-slide">
+                            <article class="news-card">
+                                <div class="news-image-box">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIYIGT2t4zOND-3TBGZKL7sgmXCl6M17HgnKKaThUZe8-P9JqD00eLN8JdoJSZ5OcuPIiuo6PJVl1DE_jAjOGUOKXMuIQ65R5kcgEH443hs0Tzo8BfWX4hvPK93CWGiGfeTR0hFLqH04OjDg6dnAw-C7N_LCz6td3yxg-RtZzZuwX4pvSAtTTdBWq193F9gJepZss-YtcxBkVMHhD8PVkT-P8d17jGXFcLjceUfa1U7MCrGvSSgfb7OA_U85Xbcr9WIy9Xs9SHD0Q" alt="Update">
+                                </div>
+                                <div class="news-body-box">
+                                    <span class="news-badge-tag type-update">UPDATE 2.4.0</span>
+                                    <h3>The Void Rises</h3>
+                                    <p>Explore the new Void dimension with exclusive seasonal rewards and challenges.</p>
+                                    <div class="news-meta-row">
+                                        <span>Oct 24, 2024</span>
+                                        <span class="material-symbols-outlined">trending_flat</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item-slide">
+                            <article class="news-card">
+                                <div class="news-image-box">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCANk7P4iKCQ4hPdK-Fprs931X9MN6wZ-Di-RUpELtexWnZVOT95WqTzgNMqv2m7cKbIV1in6s1SSLt-t58fTyUXRl2dJP_7aksM8_bof4EMIBTE2FMHNA-5Up8NSepC6i3qXbyGgQml8uCP-xAbkUV6hF3bLeRhhK-4MILIE01E4QcpRUbljGc-PVeGwZVWBkS34qtTQeKsxWEpF7FxO4e1bxIHcuTXfTn6M4-kGxhSKFL2JDM4IG0ppr3bvVc66lZ6PWNKQuk_l0" alt="Event">
+                                </div>
+                                <div class="news-body-box">
+                                    <span class="news-badge-tag type-event">EVENT</span>
+                                    <h3>Clan Wars Global</h3>
+                                    <p>Gather your allies! The biggest tournament in BaNG history starts next week.</p>
+                                    <div class="news-meta-row">
+                                        <span>Oct 21, 2024</span>
+                                        <span class="material-symbols-outlined">trending_flat</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item-slide">
+                            <article class="news-card">
+                                <div class="news-image-box">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkFc3uVVGze9DmpVJ5mzvTLdShXKC8Ggut2BUz5NRC-ewBR4TSxNJS_9S0GpFlS4FrJMGXj9lwdEdvOcW3UhOJkJhjlrswr_XVe_lhrVSs-k4pgRgwXJIfJkVLcuzYi6_C7o5Sl7vvWQww-c55LGodP9JW6bfxKtAw4Lx_py2K2zRm1nbKjRHSyl9T1b3TuFoCMe_lJxQh090RKgXHiMIxUj3PiKnMoyRpIljzbsez0lVJSMTxCgY4JHcswdMw_caueyjmylerSSE" alt="Patch">
+                                </div>
+                                <div class="news-body-box">
+                                    <span class="news-badge-tag type-patch">PATCH</span>
+                                    <h3>Balance Reborn</h3>
+                                    <p>Critical adjustments to Air Troops and Siege engines for a fairer battlefield.</p>
+                                    <div class="news-meta-row">
+                                        <span>Oct 18, 2024</span>
+                                        <span class="material-symbols-outlined">trending_flat</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="elite-units-section">
+            <div class="text-center-header">
+                <h2>Elite Command Units</h2>
+                <p>Discover the legendary warriors that will lead your army to victory across the shattered realms.</p>
+            </div>
+            <div class="popular-troops-grid">
+                <div class="elite-troop-card card-glow-legendary">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK6EC8eQ50-E_-PuMVtJOayun80b_8UTGn3ZfJ7YxS2s6VdBU1otbu-PYKdoMQYE2tVbXkhVA25heuwHaGGYSFDFiNx4EoRkUVEiEI6WHmePZJlCE0xtYHejjYPsySy-XOipMCNOrE1EV_uFiPuKw28HWbVIWEzvWXZsorqkXX-J_HSOZ4DTERXmzWLXMBjoaUotpkfKxlPvbTAKV8_ZQePkViOok4SJRli88Zvmv1sFYHhXHHrxYRqvwRYBn9LtxodGF2U6595mU" alt="Shadow King">
+                    <div class="card-gradient-shield"></div>
+                    <div class="level-badge-corner rank-legendary">LVL 50</div>
+                    <div class="elite-card-details">
+                        <span class="rarity-sub-label text-gold">LEGENDARY HERO</span>
+                        <h4>Shadow King</h4>
+                        <div class="elite-stats-row">
+                            <div>
+                                <span class="stat-label-mini">ATK</span>
+                                <span class="stat-value-mini">4,200</span>
+                            </div>
+                            <div>
+                                <span class="stat-label-mini">SPD</span>
+                                <span class="stat-value-mini">FAST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elite-troop-card">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7VpJII8F_pUjHqHcwtOuok4-SMBRLHDh-2i6dg-Ki8X0RA4XiFtTClJKfnOVrhRBU3Nq1wOWQI-h_ta-JX2qSKDp7vM5cv4GGLSSFgHNqupoRlF34tfWAPfruZQfpH4iTslDFqzW8XL4yR9c7F1NLPmkpLxp6778WbcVdQzYLwEz1j7ixddTs7vwra3IRUv8GQ61aiQKLIv61Qo2QYfmn36SwNg7o_GOno6IutkwoQLurnno1L1WAJsKQOYj_nfggBbgbjMxFaJA" alt="Storm Caller">
+                    <div class="card-gradient-shield"></div>
+                    <div class="level-badge-corner rank-epic">LVL 35</div>
+                    <div class="elite-card-details">
+                        <span class="rarity-sub-label text-purple-accent">EPIC MAGE</span>
+                        <h4>Storm Caller</h4>
+                        <div class="elite-stats-row">
+                            <div>
+                                <span class="stat-label-mini">AOE</span>
+                                <span class="stat-value-mini">HIGH</span>
+                            </div>
+                            <div>
+                                <span class="stat-label-mini">ELX</span>
+                                <span class="stat-value-mini">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elite-troop-card">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQJp7wFXxzEZBXo1YJWa11BvKU0hRu6ldwtrbetRI6nYsw_Py0DVNhjrZq0IMNEia83lwVK_T9g9b4dIHtxxkEjAYz1GbFRDsNYLZkeztI_0fzmGj4O5XPCmF1nZHLAFupStYF64ZiOevZS1ObSlCbYZmJCLZ7wNY1Xl98-yvYgsAd9CTadO0dyNudHGsdSKTNvyXYBpxznG7gHCVx2HGTpa5-aBe1sLJly5M_dwW_usUktvGFntmc8SgBHQzbZQ8hGCVVzjljnuA" alt="Void Breaker">
+                    <div class="level-badge-corner rank-standard">LVL 20</div>
+                    <div class="elite-card-details">
+                        <span class="rarity-sub-label text-slate">SIEGE UNIT</span>
+                        <h4>Void Breaker</h4>
+                        <div class="elite-stats-row">
+                            <div>
+                                <span class="stat-label-mini">HP</span>
+                                <span class="stat-value-mini">12K</span>
+                            </div>
+                            <div>
+                                <span class="stat-label-mini">COST</span>
+                                <span class="stat-value-mini">700</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="elite-troop-card">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfZ--mmjygZUujp9kVHtht2yeU9Yl6H920b_fOT34Rxhd_nQINOOftuBmDIrbhbe0qsgeMpKXvmmW5wcND_N8pg5qBcfySyudqAmGoo9PxHwznWsaawf0LAHjz8u6xyUHXiwx3sgI-apjS3lkzJrEo9rLKjK0ALoisRF4VPRb_SmK_gx18qCVB_fZETeNz3lmrY6QB2b2fJFAtUe1K53czt9b3RAK1MfBbj5qN79s66OK7TPZ9pybcjRu-bd-ZsoeMmAiGSQa7750" alt="Elixir Glider">
+                    <div class="card-gradient-shield"></div>
+                    <div class="level-badge-corner rank-standard">LVL 40</div>
+                    <div class="elite-card-details">
+                        <span class="rarity-sub-label text-slate">AIR SCOUT</span>
+                        <h4>Elixir Glider</h4>
+                        <div class="elite-stats-row">
+                            <div>
+                                <span class="stat-label-mini">RNG</span>
+                                <span class="stat-value-mini">LONG</span>
+                            </div>
+                            <div>
+                                <span class="stat-label-mini">MOV</span>
+                                <span class="stat-value-mini">HIGH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-footer-action">
+                <a href="troops.html" class="btn-armory-link">
+                    Enter the Armory <span class="material-symbols-outlined">shield</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="map-timeline-split">
+            <div class="split-layout-container">
+                <div class="vertical-phases-timeline">
+                    <div class="timeline-back-line"></div>
+                    <div class="phase-node-row">
+                        <div class="phase-diamond-bullet bullet-purple"></div>
+                        <div class="phase-text-content">
+                            <h4>Phase 1: Construction</h4>
+                            <p>Build your fortress from the ground up. Utilize Dark Elixir to strengthen walls and automate defenses.</p>
+                        </div>
+                    </div>
+                    <div class="phase-node-row">
+                        <div class="phase-diamond-bullet bullet-gold"></div>
+                        <div class="phase-text-content">
+                            <h4>Phase 2: Training</h4>
+                            <p>Recruit specialized troops from across the realms. Every unit has unique synergies to master.</p>
+                        </div>
+                    </div>
+                    <div class="phase-node-row">
+                        <div class="phase-diamond-bullet bullet-purple-blank"></div>
+                        <div class="phase-text-content">
+                            <h4>Phase 3: Conquest</h4>
+                            <p>Launch massive campaigns and dominate the leaderboards in seasonal arena cycles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-map-frame">
+                    <div class="map-viewport-window" id="map-viewport">
+                        <div class="map-pannable-content" id="map-content">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2e_jIeGdG5e0rLLRb1Dw0KLWvWCpf03PYhAKFRa1izgzhCuljjibiPubJQoGwfCzdzqCKndZdsXTHZXmR1j9MsQrlgq2akGSsz_FtVjVotNkjsBH0yjarmIyzKsHQNGPTIH0zdC_YcKT6DoBmJR3DquRfu1BPb02WJhH0cc8IAC-LMfkB_AOE-DDGabfDgB66PECPhpzzv7f4TkKesZN0y9j-CP89KzJ7vK25_W5urOTRnwihf216c1xo2M6iorPLPSMF4GVXsfk" alt="Tactical Map" style="max-width: none; width: 1200px; height: auto; display: block;">
+                        </div>
+                        <div class="map-interactive-hint">
+                            <span class="material-symbols-outlined">drag_pan</span> INTERACTIVE MAP
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid-layout">
+            <div class="footer-brand-summary">
+                <div class="footer-brand-title">Clash of BaNG</div>
+                <p>A next-generation strategic battle simulator. Command, conquer, and thrive in the abyss.</p>
+                <div class="social-icon-row">
+                    <a href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a href="#"><span class="material-symbols-outlined">terminal</span></a>
+                </div>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Game Links</h5>
+                <ul>
+                    <li><a href="troops.html">Troops</a></li>
+                    <li><a href="#">Clans</a></li>
+                    <li><a href="#">Arena</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter-column">
+                <h5>Newsletter</h5>
+                <p>Get early access to patch notes and exclusive rewards.</p>
+                <div class="newsletter-input-group">
+                    <input type="email" placeholder="Soldier Email...">
+                    <button><span class="material-symbols-outlined">send</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-sub-bar">
+            <span>© 2026 CLASH OF BANG. ALL RIGHTS RESERVED.</span>
+        </div>
+    </footer>
+
+    <a class="floating-action-battle-btn" href="register.html">
+        <span class="material-symbols-outlined">swords</span>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

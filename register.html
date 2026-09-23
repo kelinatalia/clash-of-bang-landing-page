@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of BaNG | Member Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Clash of BaNG</a></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="troops.html">Troops</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="registration-main-canvas">
+        <div class="form-card-container">
+            <div class="form-header-block">
+                <h1>Join the Legion</h1>
+                <p>Forge your destiny in the Clash of BaNG. Complete the registration to unlock your first troop.</p>
+            </div>
+            <form id="clanRegistrationForm" class="custom-form-layout">
+                <div class="form-grid-dual">
+                    <div class="input-interactive-group">
+                        <label>Full Name</label>
+                        <input type="text" id="joinerName" placeholder="General Maximus">
+                    </div>
+                    <div class="input-interactive-group">
+                        <label>Email Address</label>
+                        <input type="text" id="joinerEmail" placeholder="commander@clash.com">
+                    </div>
+                </div>
+                <div class="form-grid-dual">
+                    <div class="input-interactive-group">
+                        <label>Gender</label>
+                        <div class="custom-select-box">
+                            <select id="joinerGender">
+                                <option value="" disabled selected>Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Mystic Entity">Mystic Entity</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                            <span class="material-symbols-outlined dropdown-arrow-icon">expand_more</span>
+                        </div>
+                    </div>
+                    <div class="input-interactive-group">
+                        <label>Age</label>
+                        <input type="number" id="joinerAge" placeholder="21">
+                    </div>
+                </div>
+                <div class="input-interactive-group">
+                    <label>Favorite Troop Type</label>
+                    <div class="custom-select-box">
+                        <select id="joinerTroop">
+                            <option value="" disabled selected>Choose your commander</option>
+                            <option value="Dread Knight">Dread Knight (Heavy Melee)</option>
+                            <option value="Void Stalker">Void Stalker (Ranged Assassin)</option>
+                            <option value="Lich King">Lich King (Magic Support)</option>
+                            <option value="Storm Titan">Storm Titan (Siege Tank)</option>
+                            <option value="Phoenix Guard">Phoenix Guard (High Mobility)</option>
+                        </select>
+                        <span class="material-symbols-outlined dropdown-arrow-icon">expand_more</span>
+                    </div>
+                </div>
+                <div class="input-interactive-group">
+                    <label>Reason to Join</label>
+                    <textarea id="joinerReason" rows="5" placeholder="Describe your strategic goals and why you wish to join the elite clans of BaNG..."></textarea>
+                </div>
+                <div class="form-submission-block">
+                    <button type="submit" class="btn-submit-soldier">
+                        <span class="material-symbols-outlined">swords</span>
+                        Register Now
+                    </button>
+                    <p class="terms-warfare-text">BY REGISTERING, YOU AGREE TO OUR TERMS OF WARFARE.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid-layout">
+            <div class="footer-brand-summary">
+                <div class="footer-brand-title">Clash of BaNG</div>
+                <p>A next-generation strategic battle simulator. Command, conquer, and thrive in the abyss.</p>
+                <div class="social-icon-row">
+                    <a href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a href="#"><span class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter-column">
+                <h5>Newsletter</h5>
+                <p>Get early access to patch notes and exclusive rewards.</p>
+                <div class="newsletter-input-group">
+                    <input type="email" placeholder="Email Address">
+                    <button>JOIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-sub-bar">
+            <span>© 2026 CLASH OF BANG. ALL RIGHTS RESERVED.</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>s

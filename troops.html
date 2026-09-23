@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troops | Clash of BaNG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="main-header">
+        <div class="header-container">
+            <div class="logo">Clash of BaNG</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="troops.html" class="active-link">Troops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" id="troopsSearchInput" placeholder="Search troops...">
+                </div>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="troops-main-canvas">
+        <header class="troops-page-header">
+            <div class="command-tag-row">
+                <span class="tag-accent-line"></span>
+                <span class="tag-label-text">Tactical Command</span>
+            </div>
+            <h1 class="troops-display-title">The Battle Recruits</h1>
+            <p class="troops-subtitle-text">Deploy your strategy with our high-density tactical grid. Hover over any unit to reveal combat specifications and performance analytics.</p>
+        </header>
+
+        <div class="filter-buttons-bar">
+            <button class="btn-filter-tab active-filter-tab" id="filterAll">All Troops</button>
+            <button class="btn-filter-tab" id="filterMelee">Melee</button>
+            <button class="btn-filter-tab" id="filterRanged">Ranged</button>
+            <button class="btn-filter-tab" id="filterSiege">Siege</button>
+        </div>
+
+        <div class="troops-tactical-grid">
+            <div class="troop-tactical-card" data-category="Melee">
+                <div class="level-badge-ribbon">LVL 55</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCc-KYKHvs3Q1ycuW0j5wqHKvdQDRi7SZYNOhyuGjYnGpk05XOZSPolS_xoeY4kGIRgsFk3SuDthxOCiyS_muXlMxIL1kwdCOgi9yogyyFJeg_sHGUThJRCfjtUoraoQo92yfjx13Uih32e4iXYQUMCSEi3xIzHBYjzF66HDfRTSeT7b0yn7s49e_zXu-sgiuuk9R-4bQkyJN0ufmnolqG1mdoAihQ4zo47WALTngAvanVkSZT091La0D2tODt6U3oGfduMG_KkeI" alt="Dark Knight" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Dark Knight</h3>
+                    <p>Legendary Melee</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Dark Knight</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">3,200</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">450</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Melee</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Ranged">
+                <div class="level-badge-ribbon">LVL 42</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWlHfeteLbwLq3ydrWgSW0qvR00sDRuTP5InpfIHXtqCbWbzDRWmsMNNkk33HjJYSI1Dl1-tVTPUUHFPMOV6i6KU5EYyprJeZxvpKogu66G64X9VgWSLKgp6k2NFBfAc-vLNs2aqdMp8A5qVUeSgHEC8UszBOS5yEFAuqlq3GZF5iqjwjzBs-Mw0br2HdZWIRrlut74zo3CsowwrKl-3WwqOeLVEw-7vnrAOYY-PZOMfxTKU15IuKfJqfeOfnqXTt8hH7zjdp-ehM" alt="Dragon Rider" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Dragon Rider</h3>
+                    <p>Epic Air</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Dragon Rider</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">2,800</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">520</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Air/Splash</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Ranged">
+                <div class="level-badge-ribbon">LVL 60</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvpMosWtXSo3WTw-5XUH1NKW1GqkOW4_X4QAWUJ-ZiRUVD4MSFGkhH91tvEros6ce7ipHQ0HJyHTi-XIPJNy3f9NSFwb56qui_NUcmlpYSHC-pGIyLqlfSki8tiIJolgvCwSqeIvWPDd2YoI6PWUidn-k639YECSRfHF-aQoE9of69vX2j7GISbUydk_RY59K37CkLGVPxUO-1nYOCJgBmJ6izJdWLQ_mofnr6ni7ECGYkWWhkPqE7SjZjvH1nfHzYSD6mCsmeYvc" alt="Mystic Spell Caster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Mystic Spell Caster</h3>
+                    <p>Mythic Magic</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Mystic Spell Caster</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">1,200</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">680</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Magic/Area</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Melee">
+                <div class="level-badge-ribbon">LVL 48</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA926DG4Gan1Djqv_-dJs_3N659aRP7G5EObKn0xtPOO-EcD0Fr_QsJLa9FkfeOYKNeV4_wDeSYUNaqZHkSOEDrWiBBFz91yuD2dBA_vdx22C6uZ6SffJvS_cS5opBbVARp7-0OCVSgT8nq8e_xJ3EwykTNwyqAhbESYjPpEKF9JcJ4K8YVJdKVIZ2MY2S93W94LnWaX-mrMEaJsfJ992rZiMAqOb7N3a4MQmtgkrFnbrNA8O5BecNTcBjWslhrRh774mW8D7nKd40" alt="Shadow Assassin" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Shadow Assassin</h3>
+                    <p>Elite Stealth</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Shadow Assassin</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">1,800</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">850</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Stealth/Burst</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Siege">
+                <div class="level-badge-ribbon">LVL 70</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXqsBWpdzmPQ-GbkoVyK8o4THF1heWAiMQfzBPSU0_o7tmgOiJjcG5gFtEgD3LWWSw-mF6_WQG_t2ojucy_hNTaxliR0Gxs3vRkjWfOfRK8r5ngOs1xSh-gv3DyKgbMJH5ZKikm0VgxjsrLKpA-UIFNwGYHo5789fbch0Qkr2-aGljD8tHYfNBZzPArkD5yiumSN7NCjCoq57MZo-oiUlVkGn-PartB37VuFX4SIM6SMUw8G5V1jhCFRTkbxEBEKpVHkaqSKt5Ads" alt="Heavy Siege Tank" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Heavy Siege Tank</h3>
+                    <p>Ultimate Siege</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Heavy Siege Tank</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">4,500</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">380</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Siege/Ground</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Melee">
+                <div class="level-badge-ribbon">LVL 35</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZeEy7Mc-MhBju_lZdzJWjTpvLYWhV9S2eiP50R9I45axZ06jSGYHeRVP3J4WCjH6C-Lzkz3AkFIbViZmF-0CHsVc4S3Nb4pcy2y4WjFEdh-ZwtwBL6YoSthQQdLMdHZWNjHHqDuP93tybSy0EusfDQkaknCyS1AW_eWhvuvdiyej_pjUgdc078urPH7XCypmuTh9ObJzJ7sPlQpu0kFXVo4m0hRG32C0PRCehmsYXW6JzHLQj0Z2k-imI_vH7WUnZ6BWaYKKvvV8" alt="Ancient Guardian" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Ancient Guardian</h3>
+                    <p>Heavy Tank</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Ancient Guardian</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">5,500</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">220</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Tank/Melee</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Melee">
+                <div class="level-badge-ribbon">LVL 52</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo0uxlC993aPbFKAL3nuS5-haPYt4ImIJdPqXaO2pQfhBDvr-k0fbDIEa-U_zU4fU_qNvpiPXuEp6Lr5Qdk3vorB5urOFyTP6Cfc5zIAynN2uYfqdKPljnAgKa9t46Oy72uruu7kPNqd-kFMt_rDqYcjdFpxeDIgHwEM62Hfi8mfjokrwm9FJ8oSg8tvMgu7CIhbJevsbOUOSKXv-kvakezoqNPODNE1L88f8a-tKgKrQYJbFVrTNSgQhwtKisKXotjl-0yEYw_5Y" alt="Elite Orc Warrior" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Elite Orc Warrior</h3>
+                    <p>Elite Melee</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Elite Orc Warrior</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">2,400</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">480</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Melee</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Ranged">
+                <div class="level-badge-ribbon">LVL 44</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtW2U0oVWCWB2Jl3AD2tUrbWENBEoxTTSmJavr_sDdtMALKGgjfhGWqzdpR0YxwJc0MeTyULI4nE4ZmKRZBEBeYnGQAr8XiDzqaEYqcXRmc0o7VRmO8uZnNISFZpKYDtWTcSmPf52kJuk-92_r3KUrbUuMRUGqJouEW2lb4HMxvIc_wwLZqVnwdL6u2CAXHlIYTE1kFdIMun8oOCt6C5fF0qTW8OwPILcr_AzdOvl-itEQz8k5R3CI8vU_Auv6Hl81mpDxJmIylE0" alt="Lightning Mage" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Lightning Mage</h3>
+                    <p>Mythic Magic</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Lightning Mage</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">1,500</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">720</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Chain/Stun</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+
+            <div class="troop-tactical-card" data-category="Ranged">
+                <div class="level-badge-ribbon">LVL 65</div>
+                <div class="card-image-holder">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyENU6LG8WaTKUml3uqUeWoCm02FFZeZ2o_0yi5WXg_jkGtftireKMu_MaxySZdpuU9_ivnDF0DPeTgCDRHlVdx5HTw4RIvIh54PffLeJUMgyun1_TPivGH-8qTG5Y1UtaN1Hac_W3KQJgDT_1N3-7HTBlSUk4d2tcZMnuXz2Mv43KpuqECFGS6rCijqxlJ-NdjcE7Sk6JF0UPnzpRZFwheYIeo4C3SrHXaNslwFyIxJSuobRDm-5SPB3OWbaLYQIfMG8F1L_Voo" alt="Undead Necromancer" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="bottom-dark-gradient"></div>
+                </div>
+                <div class="card-default-title">
+                    <h3>Undead Necromancer</h3>
+                    <p>Legendary Support</p>
+                </div>
+                <div class="card-stats-overlay">
+                    <h3>Undead Necromancer</h3>
+                    <div class="stats-table-wrapper">
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Hitpoints</span>
+                            <span class="value-stat-number">1,400</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">DPS</span>
+                            <span class="value-stat-number">350</span>
+                        </div>
+                        <div class="stats-data-row">
+                            <span class="label-stat-name">Type</span>
+                            <span class="value-stat-number">Summoner/Support</span>
+                        </div>
+                    </div>
+                    <button class="btn-card-upgrade">Upgrade</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid-layout">
+            <div class="footer-brand-summary">
+                <div class="footer-brand-title">Clash of BaNG</div>
+                <p>The ultimate strategic battleground where commanders from around the world clash for dominance.</p>
+                <div class="social-icon-row">
+                    <a href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a href="#"><span class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Community</h5>
+                <ul>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter-column">
+                <h5>Newsletter</h5>
+                <p>Get early access to patch notes and exclusive rewards.</p>
+                <div class="newsletter-input-group">
+                    <input type="email" placeholder="Email Address">
+                    <button>JOIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-sub-bar">
+            <span>© 2026 CLASH OF BANG. ALL RIGHTS RESERVED.</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

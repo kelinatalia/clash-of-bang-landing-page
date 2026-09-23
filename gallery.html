@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of BaNG | Eternal Archives</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Poppins:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .archive-hero-section {
+            padding-top: 120px;
+            margin-bottom: 48px;
+        }
+        .gallery-main-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+        .archive-flex-header {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        @media (min-width: 1024px) {
+            .archive-flex-header {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 32px;
+            }
+        }
+        .archive-title-block h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 60px;
+            font-weight: 800;
+            color: #ddb7ff;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin: 0 0 8px 0;
+            line-height: 1.2;
+        }
+        .archive-title-block p {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #cfc2d6;
+            max-width: 768px;
+            margin: 0;
+            line-height: 28px;
+        }
+        .archive-filter-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .archive-filter-controls {
+                flex-direction: row;
+                align-items: center;
+                width: auto;
+            }
+        }
+        .select-filter-box {
+            position: relative;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .select-filter-box {
+                width: 192px;
+            }
+        }
+        .select-filter-box select {
+            width: 100%;
+            background-color: #151b2d;
+            border: 1px solid rgba(152, 141, 159, 0.3);
+            color: #dce1fb;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            padding: 8px 40px 8px 16px;
+            height: 38px;
+            border-radius: 4px;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+        }
+        .select-filter-box .dropdown-arrow {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ddb7ff;
+            pointer-events: none;
+        }
+        .archive-action-buttons {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .archive-action-buttons {
+                width: auto;
+            }
+        }
+        .btn-archive-tab {
+            flex: 1;
+            background-color: #191f31;
+            border: 1px solid rgba(152, 141, 159, 0.3);
+            color: #dce1fb;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            height: 38px;
+            padding: 0 16px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        @media (min-width: 640px) {
+            .btn-archive-tab {
+                flex: none;
+            }
+        }
+        .btn-archive-tab:hover {
+            border-color: #ddb7ff;
+        }
+        .btn-archive-tab.active-tab {
+            background-color: rgba(221, 183, 255, 0.1);
+            border-color: rgba(221, 183, 255, 0.3);
+            color: #ddb7ff;
+        }
+        .archive-divider-line {
+            margin-top: 32px;
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(to right, rgba(221, 183, 255, 0.4), rgba(152, 141, 159, 0.2), transparent);
+        }
+        
+        /* FIX GRID CANVAS: Dipaksa menggunakan !important agar tidak di-override oleh css luar */
+        .gallery-grid-canvas {
+            display: grid !important;
+            grid-template-cols: 1fr !important;
+            gap: 32px !important;
+            margin-bottom: 64px;
+            min-height: auto;
+        }
+        @media (min-width: 768px) {
+            .gallery-grid-canvas {
+                grid-template-cols: repeat(2, 1fr) !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            .gallery-grid-canvas {
+                grid-template-cols: repeat(3, 1fr) !important;
+            }
+        }
+        
+        /* FIX CARD ITEM: Dipaksa menggunakan !important agar flex direction tetap kolom dan tidak melebar sendirian */
+        .gallery-card-item {
+            position: relative;
+            overflow: hidden;
+            background-color: #191f31;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
+        }
+        .gallery-card-item:hover {
+            border-color: #ddb7ff;
+            box-shadow: 0 0 20px rgba(221, 183, 255, 0.3);
+        }
+        .card-visual-frame {
+            position: relative;
+            height: 256px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .card-visual-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s;
+        }
+        .gallery-card-item:hover .card-visual-frame img {
+            transform: scale(1.1);
+        }
+        .card-visual-dim {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(2, 6, 23, 0.4);
+            mix-blend-mode: mix-blend-multiply;
+            transition: opacity 0.3s;
+        }
+        .gallery-card-item:hover .card-visual-dim {
+            opacity: 0.2;
+        }
+        .card-visual-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.2) 100%);
+        }
+        .card-rarity-ribbon {
+            position: absolute;
+            top: 16px;
+            right: 0;
+            background-color: #ddb7ff;
+            color: #490080;
+            padding: 4px 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: bold;
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .card-text-details {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 1px solid rgba(152, 141, 159, 0.1);
+        }
+        .card-title-group h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ddb7ff;
+            margin: 0 0 8px 0;
+            transition: color 0.3s;
+        }
+        .card-title-group p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #cfc2d6;
+            margin: 0;
+            line-height: 24px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-stats-row {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(152, 141, 159, 0.2);
+            margin-top: 24px;
+            padding-top: 16px;
+        }
+        .stat-meta-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-meta-column .label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #988d9f;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+        }
+        .stat-meta-column .val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: #dce1fb;
+        }
+        .stat-meta-column.right-align {
+            text-align: right;
+        }
+        .stat-meta-column.right-align .val {
+            color: #ddb7ff;
+        }
+        .gallery-pagination-bar {
+            margin-top: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        .btn-archive-nav {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #191f31;
+            border: 1px solid rgba(152, 141, 159, 0.3);
+            color: #ddb7ff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-archive-nav:hover:not(:disabled) {
+            background-color: rgba(221, 183, 255, 0.1);
+        }
+        .btn-archive-nav:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+        .archive-numbers-group {
+            display: flex;
+            gap: 8px;
+        }
+        .btn-archive-page {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(152, 141, 159, 0.3);
+            background-color: #191f31;
+            color: #cfc2d6;
+        }
+        .btn-archive-page.active-page {
+            background-color: #ddb7ff;
+            color: #490080;
+            font-weight: bold;
+            border-color: #ddb7ff;
+            box-shadow: 0 0 15px rgba(221, 183, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">Clash of BaNG</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active-link">Gallery</a></li>
+                <li><a href="troops.html">Troops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" id="catalogSearch" placeholder="Search...">
+                </div>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="gallery-main-container">
+        <section class="archive-hero-section">
+            <div class="archive-flex-header">
+                <div class="archive-title-block">
+                    <h1>The Eternal Archives</h1>
+                    <p>A comprehensive visual catalog of the Dark Elixir realm. Study the legendary warriors, mythical beasts, and forbidden structures that define our eternal conquest.</p>
+                </div>
+                <div class="archive-filter-controls">
+                    <div class="select-filter-box">
+                        <select id="rarityFilter">
+                            <option value="all">All Rarities</option>
+                            <option value="Legendary">Legendary</option>
+                            <option value="Mythic">Mythic</option>
+                            <option value="Rare">Rare</option>
+                            <option value="Common">Common</option>
+                        </select>
+                        <span class="material-symbols-outlined dropdown-arrow">expand_more</span>
+                    </div>
+                    <div class="archive-action-buttons">
+                        <button class="btn-archive-tab">
+                            <span class="material-symbols-outlined" style="font-size:20px;">filter_list</span>Sort
+                        </button>
+                        <button class="btn-archive-tab active-tab">
+                            <span class="material-symbols-outlined" style="font-size:20px;">grid_view</span>Grid
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="archive-divider-line"></div>
+        </section>
+
+        <section class="grid-layout-section">
+            <div class="gallery-grid-canvas" id="galleryGrid"></div>
+        </section>
+
+        <div class="gallery-pagination-bar">
+            <button class="btn-archive-nav" id="prevBtn">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <div class="archive-numbers-group" id="paginationNumbers"></div>
+            <button class="btn-archive-nav" id="nextBtn">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid-layout">
+            <div class="footer-brand-summary">
+                <div class="footer-brand-title">Clash of BaNG</div>
+                <p class="text-body-md">The ultimate fantasy combat experience. Strategize, deploy, and dominate the dark elixir realms.</p>
+                <div class="social-icon-row">
+                    <a href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a href="#"><span class="material-symbols-outlined">forum</span></a>
+                    <a href="#"><span class="material-symbols-outlined">share</span></a>
+                </div>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter-column">
+                <h5>System Status</h5>
+                <div class="status-badge" style="display: flex; align-items: center; gap: 8px; padding: 8px 16px; background-color: #191f31; border: 1px solid rgba(221, 183, 255, 0.2); border-radius: 9999px; width: fit-content;">
+                    <span class="status-pulse" style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%;"></span>
+                    <span class="status-text" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #dce1fb;">SERVERS ONLINE</span>
+                </div>
+                <div class="footer-sub-bar" style="margin-top: 24px; padding: 0; border: none; text-align: left;">
+                    <span style="font-size: 11px; color: #988d9f;">© 2026 CLASH OF BANG. ALL RIGHTS RESERVED.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const galleryItems = [
+            { title: 'Void Reaver', rarity: 'Legendary', desc: 'A phantom warrior forged in the depths of the Dark Elixir pits.', statLabel: 'Attack Type', statValue: 'Melee / Burst', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDVN4gxYByqRl3HjWTomj25ca8FRDXzoeOmaDuyJ4LkgwUzn_JQ_ErkYdss5MNHdo42i_4xr_lGqObe1yqje1TB7XNhWVYsyROQcf29b-_J84PzvSBJhBCn-B2yWWe8dpUAWiY0iBf4VBALRLgkl_NibwVEL45c0IXwnDNHdnT9chloXAcuADuBuQIMiBxw5obIVTYam_Y3s3bs7weW2-TPnaZ1c6XGPimcrN2P5KZK6C19Hh58DBc-W1fvk3hz8R2oLoqU741Tcho' },
+            { title: 'Aether Citadel', rarity: 'Mythic', desc: 'Floating high above the smog, this sanctuary serves as the primary hub.', statLabel: 'Location', statValue: 'Cloud District', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhIYAYfUj2_gOwojEr3CbtfKdTrXrOnBuq-iv5-WI4KHnVIbgFSHprViSMzllCM5Sd00g3ZH6AcwwmOaj90RDajcCQWo33wAyGoGOTVN4TFeuDH53OI9AMXinqAznV6LXzlBIAWpPxrxeUCXQ4chbdETF5yU7DztJGcVUgvjLB6KAdZYvfQimMFgVSgv7MaOyv57xWGRyA1_0in621BODstngvV0vv3PW4zc2n8U8J9atHlay6OI0TOm9zkjX5ys7kBLF5PfTtGe0' },
+            { title: 'Ethereal Potion', rarity: 'Rare', desc: 'Where the essence of the fallen is refined into potent Elixir.', statLabel: 'Yield Rate', statValue: 'High Energy', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBNM17j0U7FV3xmgvVEpf58o26zaDtpFTwIlTPcNRiWAMUSeglGc2c7PFCTnNwUvaqatNSB2CgYewhPopctqCOlc2D60eozMgg1U6Zt1_bGYgRgiRFXiRc06Ng6CCkVCaS5fbf4TDxVyD_PmS43u9glR5lFQx8RGQrM-KHZ_XkwDpUS-cFj_nztJG4T4EQRcolWBQLwkbrwrHOzFVTjO98wRINPwxtOyVxlbujkNiOZcw2pPy3mtC2y4QDX5Ds8hQ6JU_SRO1b_uQk' },
+            { title: 'Dread Wolf', rarity: 'Common', desc: 'Fast, lethal, and nearly invisible in low-light environments.', statLabel: 'Stealth', statValue: 'Rank A', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA9IWbveTbRm7zkhFynzbQM-Ovdqzaj2th7w-zlV4DxfpesKK73JQZ_GtQaoS34Ifd4ER1XArlfPJSnpEg5XhdF2qJW-ukPaZ8eurKvbgQC07ffKFMrAOQjEcdqoteruliBaJq2M_5GGggIfe7LLTm-QsMVHnB5aFTisjBOTLQaju3s9X4857MkFBvFV_5xgvzRq1qIrwElBfMz-1DbmxKnC94YWjvxRiY3lasFgBpa1lre_IEE0tL7tcmW2YKM-RFNC58WKgHLusM' },
+            { title: 'Shadow Capital', rarity: 'Legendary', desc: 'The beating heart of the empire. Every stone laid with promise.', statLabel: 'Security', statValue: 'Maximum', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQJp7wFXxzEZBXo1YJWa11BvKU0hRu6ldwtrbetRI6nYsw_Py0DVNhjrZq0IMNEia83lwVK_T9g9b4dIHtxxkEjAYz1GbFRDsNYLZkeztI_0fzmGj4O5XPCmF1nZHLAFupStYF64ZiOevZS1ObSlCbYZmJCLZ7wNY1Xl98-yvYgsAd9CTadO0dyNudHGsdSKTNvyXYBpxznG7gHCVx2HGTpa5-aBe1sLJly5M_dwW_usUktvGFntmc8SgBHQzbZQ8hGCVVzjljnuA' },
+            { title: 'Chronos Core', rarity: 'Mythic', desc: 'Experimental power source that temporarily slows time in a radius.', statLabel: 'Stability', statValue: 'Unstable', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCdz5l_W9TJ8TPsK8FvcfTCu2EB4lSdKDQTJ-TtarBt3luA_qes5IY-muo-m2dlH3AUAeRuUjl5pqRGF_EpJJELCpUBCmKKTnxWtcVWFLww4SZngLqTWKzpvZNeDYhKRazx5rapehbDJnBAzfGIv-jklgvpmDRgeNdphgiKjbbwaZBzNtg8d2IuPYHqv30bSUjsriwk4LJu3ywearY-6vELZgzEU7n0ZKTreCVsb4t58I7ILqu-Pq-KjfyIGaf_HY1trDXnZVec3Hg' },
+            { title: 'Elixir Golem', rarity: 'Rare', desc: 'A lumbering mass of crystalized energy that splits upon defeat.', statLabel: 'Durability', statValue: 'Immense', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDP6RPQJGB1Qbe6LLZP8TkdiDjPh73T_L5ejWC8iI5A_5IrgSshauAGLwtb1CdA3kl6-YXEw9V_RQkISoL9mB9mh3UOBYHmH8i9RrZg8opnn8CD3x40yx8k1Jcs5J2aKoA2GoluGBmcyQV_5sJfrWR_PZJILkQym_ul4IsYy_kd0NYmqLl9j_tRcgKBqAo5eZa5mes7xaACyz6WbQFqpiewr1CUmptldnPG83r6Nwl7fx19WKXRtJZbmu23OPv66j3tj3Y-P_VCWBQ' },
+            { title: 'Astral Archer', rarity: 'Common', desc: 'Elite marksmen who draw arrows from the stars themselves.', statLabel: 'Range', statValue: 'Infinite', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBL26fSTZDQVWmlXUKvj02c8fXqt3J6NWqExATb_rjGNfEjwxB_zlHKr7qBThjYn74Y_M9RAEX1P3GdS_orUDpRzh3qciZyLPsWJUEkkGAc008RJ-JFxExqyW9Ypqk8YtSNROXkypyizH2xuHbSp8fLbj5tn_LaBkcCKTKS2J2utdHkaytOqXfuNylgO-ySX-38MPt4Ks19h9L0QKO3OnBEUtbal-gMFlu5-uu9nbscyzBx1iXraq3e8SP-_l_Jq-Nzp_R2YPFiVyM' },
+            { title: 'Abyssal Knight', rarity: 'Legendary', desc: 'Heavily armored juggernaut fueled by sheer dark willpower.', statLabel: 'Defense', statValue: '2500+', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCkM3mnFT-PRH0XisQLS9tcJVzI3yZMndgOsKElJdVu4Fm9ZmeGGNqcY4NM3stteU4HkQJMW5-yBLV0525ujukltUxHGQEGufe6UTvYWOcm_Qa0KP0PaPui9npDCMPGu0DFWYT2jmb6uSAkGRG1eCmlFez5SRCc2SSkvWdHMdOIBiKzXsGj3vmVkrFO0LmbozmFAgb65hnzhFOceTJnledsDMXfnBvZlzQSBy8WDCRPOnTHK-oBjKMDZBIgksfd5RL9fjYtDEtGwKg' },
+            
+            { title: 'Flame Wyvern', rarity: 'Mythic', desc: 'Ancient dragon subspecies that exhales white-hot plasma.', statLabel: 'Element', statValue: 'Plasma', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDIYIGT2t4zOND-3TBGZKL7sgm' },
+            { title: 'Frost Sentinel', rarity: 'Rare', desc: 'Frozen guardians that halt intruders with absolute zero aura.', statLabel: 'Aura', statValue: 'Cryo-Lock', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCANk7P4iKCQ4hPdK-Fprs931X9' },
+            { title: 'Mana Wraith', rarity: 'Common', desc: 'Low-level spirits that drain magic from nearby constructs.', statLabel: 'Drain', statValue: '15 MP/s', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCkFc3uVVGze9DmpVJ5mzvTLd' },
+            { title: 'Cursed Obelisk', rarity: 'Legendary', desc: 'Ancient monolith that projects fear into the hearts of foes.', statLabel: 'Debuff', statValue: 'Panic', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAK6EC8eQ50-E' },
+            { title: 'Soul Harvester', rarity: 'Mythic', desc: 'Mechanical reaper designed to collect essence from the fallen.', statLabel: 'Storage', statValue: '10k Souls', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA7VpJII8F_pUjHqHcwtOuok4-SM' },
+            { title: 'Titan Beetle', rarity: 'Rare', desc: 'Massive insectoid carrier capable of transporting entire units.', statLabel: 'Capacity', statValue: '50 Slots', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDoAZDGulP0A6' },
+            { title: 'Storm Weaver', rarity: 'Common', desc: 'Magi who manipulate local atmospheric pressure for lightning.', statLabel: 'Charge', statValue: 'Rapid', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCfZ--mmjygZUujp9kVHtht2yeU9Y' },
+            { title: 'Obsidian Guard', rarity: 'Legendary', desc: 'Indestructible statues brought to life by royal decree.', statLabel: 'Material', statValue: 'Obsidian', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZQTg3jKn1MTD1YnuyJW0HTt3' },
+            { title: 'Nether Portal', rarity: 'Mythic', desc: 'Direct gateway to the core of the Dark Elixir dimensions.', statLabel: 'Risk', statValue: 'Extreme', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZdpDUflpcVjGe4MGwbXaVXBe' },
+            
+            { title: 'Rift Stalker', rarity: 'Rare', desc: 'Predator from between worlds that tracks targets by scent.', statLabel: 'Tracking', statValue: 'Absolute', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAy9CBN0QWnT3KWWpEalCncM' },
+            { title: 'Eclipse Dragon', rarity: 'Legendary', desc: 'The ultimate apex predator, appearing only during cosmic events.', statLabel: 'Power', statValue: 'Godly', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQJp7wFXxzEZBXo1YJWa11Bv' }
+        ];
+
+        let currentPage = 1;
+        const itemsPerPage = 9;
+        let filteredItems = [...galleryItems];
+
+        // logika penyelarasan: mencocokkan pemanggil objek dengan id kontainer html asli
+        const grid = document.getElementById('galleryGrid');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageContainer = document.getElementById('paginationNumbers');
+        const searchInput = document.getElementById('catalogSearch');
+        const rarityFilter = document.getElementById('rarityFilter');
+
+        function renderGallery() {
+            if (!grid) return;
+            grid.innerHTML = '';
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageItems = filteredItems.slice(startIndex, endIndex);
+
+            if (pageItems.length === 0) {
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 80px 0; color: #988d9f; font-family: \'Inter\', sans-serif;">No items found in the archives.</div>';
+            }
+
+            pageItems.forEach(item => {
+                const card = document.createElement('article');
+                card.className = 'gallery-card item gallery-card-item';
+                
+                card.innerHTML = `
+                    <div class="card-visual-frame">
+                        <img alt="${item.title}" src="${item.img}"/>
+                        <div class="card-visual-dim"></div>
+                        <div class="card-visual-gradient"></div>
+                        <div class="card-rarity-ribbon">${item.rarity.toUpperCase()}</div>
+                    </div>
+                    <div class="card-text-details">
+                        <div class="card-title-group">
+                            <h3>${item.title}</h3>
+                            <p>${item.desc}</p>
+                        </div>
+                        <div class="card-stats-row">
+                            <div class="stat-meta-column">
+                                <span class="label">${item.statLabel}</span>
+                                <span class="val">${item.statValue}</span>
+                            </div>
+                            <div class="stat-meta-column right-align">
+                                <span class="label">Rarity</span>
+                                <span class="val">${item.rarity}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            updatePagination();
+        }
+
+        function updatePagination() {
+            if (!pageContainer) return;
+            const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+            pageContainer.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                btn.className = 'btn-archive-page';
+                if (i === currentPage) {
+                    btn.classList.add('active-page');
+                }
+
+                btn.addEventListener('click', () => {
+                    currentPage = i;
+                    renderGallery();
+                    window.scrollTo({ top: 300, behavior: 'smooth' });
+                });
+                pageContainer.appendChild(btn);
+            }
+
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+        }
+
+        function handleFilter() {
+            const search = searchInput.value.toLowerCase();
+            const rarity = rarityFilter.value;
+
+            filteredItems = galleryItems.filter(item => {
+                const matchesSearch = item.title.toLowerCase().includes(search) || item.desc.toLowerCase().includes(search);
+                const matchesRarity = rarity === 'all' || item.rarity === rarity;
+                return matchesSearch && matchesRarity;
+            });
+
+            currentPage = 1;
+            renderGallery();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderGallery();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderGallery();
+            }
+        });
+
+        searchInput.addEventListener('input', handleFilter);
+        rarityFilter.addEventListener('change', handleFilter);
+
+        renderGallery();
+    </script>
+</body>
+</html>

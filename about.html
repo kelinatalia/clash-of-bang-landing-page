@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Clash of BaNG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&family=Poppins:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="main-header">
+        <div class="header-container">
+            <div class="logo">Clash of BaNG</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="troops.html">Troops</a></li>
+                <li><a href="about.html" class="active-link">About</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" placeholder="Search history...">
+                </div>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section" style="background-image: linear-gradient(to top, #020617, rgba(2, 6, 23, 0.4), rgba(0, 0, 0, 0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2e_jIeGdG5e0rLLRb1Dw0KLWvWCpf03PYhAKFRa1izgzhCuljjibiPubJQoGwfCzdzqCKndZdsXTHZXmR1j9MsQrlgq2akGSsz_FtVjVotNkjsBH0yjarmIyzKsHQNGPTIH0zdC_YcKT6DoBmJR3DquRfu1BPb02WJhH0cc8IAC-LMfkB_AOE-DDGabfDgB66PECPhpzzv7f4TkKesZN0y9j-CP89KzJ7vK25_W5urOTRnwihf216c1xo2M6iorPLPSMF4GVXsfk'); background-size: cover; background-position: center; min-height: 500px; display: flex; align-items: center; justify-content: center;">
+            <div class="hero-content" style="text-align: center;">
+                <h1>ABOUT <span class="text-purple">LEGENDS</span></h1>
+                <p>Discover the history and the visionaries behind the ultimate Dark Elixir experience.</p>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="section-container">
+                <h2 class="section-tag">Our Mission</h2>
+                <p class="mission-text">
+                    "To create the world's most inclusive and competitive Dark Elixir gaming community, where players of all skill levels can learn, compete, and grow together while celebrating the strategic depth and excitement of the game we love."
+                </p>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="section-container">
+                <h2 class="section-title">Community Milestones</h2>
+                <div class="title-bar"></div>
+            </div>
+            <div class="timeline-wrapper">
+                <div class="timeline-line"></div>
+                <div class="timeline-scroll-container" id="timelineScroll">
+                    <div class="milestone-item" data-year="2018" onclick="centerMilestone('2018')">
+                        <div class="timeline-node active"></div>
+                        <div class="milestone-card active">
+                            <span class="card-year">2018</span>
+                            <h3>Foundation</h3>
+                            <p>Clash of BaNG was founded by a group of passionate gamers who shared a vision of creating the ultimate Dark Elixir gaming community.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2019" onclick="centerMilestone('2019')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2019</span>
+                            <h3>First Tournament</h3>
+                            <p>Hosted our inaugural clan tournament with over 50 participating clans, establishing ourselves as a competitive gaming hub.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2020" onclick="centerMilestone('2020')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2020</span>
+                            <h3>Community Growth</h3>
+                            <p>Reached 10,000 active members and launched our Discord server, creating a vibrant space for strategy discussions and clan coordination.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2021" onclick="centerMilestone('2021')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2021</span>
+                            <h3>International Expansion</h3>
+                            <p>Expanded globally with regional chapters across Europe, Asia, and the Americas, bringing together players from over 40 countries.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2022" onclick="centerMilestone('2022')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2022</span>
+                            <h3>Championship Series</h3>
+                            <p>Launched the annual Dark Elixir Championship Series with a prize pool of $100,000, attracting top-tier competitive players worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2023" onclick="centerMilestone('2023')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2023</span>
+                            <h3>Content Creation Hub</h3>
+                            <p>Established our content creation program, supporting streamers and YouTubers with resources to grow the community presence.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2024" onclick="centerMilestone('2024')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2024</span>
+                            <h3>Mobile Platform Launch</h3>
+                            <p>Released our companion mobile app for clan management, strategy guides, and real-time tournament updates.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2025" onclick="centerMilestone('2025')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2025</span>
+                            <h3>Community Milestone</h3>
+                            <p>Celebrated reaching 100,000 members and hosted our largest tournament yet with participants from 75 countries.</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item" data-year="2026" onclick="centerMilestone('2026')">
+                        <div class="timeline-node"></div>
+                        <div class="milestone-card">
+                            <span class="card-year">2026</span>
+                            <h3>Innovation Era</h3>
+                            <p>Introduced AI-powered strategy analytics and launched our mentorship program pairing veteran players with newcomers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="architects-section">
+            <div class="section-container text-center">
+                <h2 class="section-title">The Architects</h2>
+                <p class="section-subtitle">Masterminds behind the chaos</p>
+                <div class="architects-grid">
+                    <div class="architect-card">
+                        <div class="avatar-container">
+                            <div class="avatar-ring"></div>
+                            <img alt="DragonLord47" class="avatar-placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; padding: 4px; border: 4px solid transparent; transition: all 0.4s;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeHAfaShl-mvIBr1nuMmx9j90h_LqvMIrWqgy7GQU2Ag690wMIjMo933T5m5qlix5LnzwHbi3-rxHGsETk3a-IRDwfT5PrS1DjBEa5qo7orz9eQnHUDn13EwQ_YC5sMuZ7TkJ39aUCxM2k9eunFTnEBrb5tkvykj7G8GeNbqTjGznaSmbKJ4sAIiOo-NExDEzADie3TY_m0lJ4GfjgqCxQcqc6uX5pN4mMrHx6xmeuK4j1tfrIuRb5IwhLY9BV8PriYOcMJ-r806M">
+                        </div>
+                        <h4>DragonLord47</h4>
+                        <p class="role-tag">Co-Founder</p>
+                        <div class="social-icons">
+                            <span class="material-symbols-outlined">terminal</span>
+                            <span class="material-symbols-outlined">forum</span>
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                    </div>
+                    <div class="architect-card">
+                        <div class="avatar-container">
+                            <div class="avatar-ring"></div>
+                            <img alt="ShadowMaster" class="avatar-placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; padding: 4px; border: 4px solid transparent; transition: all 0.4s;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_5dWjvu-g53QW-Z6Z8BY_X_N39B4dcexvbUKQuW4MQh8vZQgARFYCsREdDIDxeO6FCrYdWS6zTQOt5vXNmxesP9h5gAEps14gJpetNI9SXwpfKbs1am6jFLzHwjRK7qmsgMfYuSv70Ms0DI5rOrT_f5O5Ui504_WowQ1P3ihLrzKN6XdW9fYieEEm_vy3TA8vxkqe2tYHD8wRyT1_XCOY01sv0fQXoqvBRQyYNP9WN7x6PAhAy_Y2vP5-K67bVo1yUrtY7q-vXno">
+                        </div>
+                        <h4>ShadowMaster</h4>
+                        <p class="role-tag">Head of Strategy</p>
+                        <div class="social-icons">
+                            <span class="material-symbols-outlined">terminal</span>
+                            <span class="material-symbols-outlined">forum</span>
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                    </div>
+                    <div class="architect-card">
+                        <div class="avatar-container">
+                            <div class="avatar-ring"></div>
+                            <img alt="Sera Thorne" class="avatar-placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; padding: 4px; border: 4px solid transparent; transition: all 0.4s;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6iiGS_nJNVOO9uSWRL4Q2qtfcwhgIHURsI40gmXc5LT-m2Mnva9tuNnrj-hykZhF6x4cIDYC4GlhuEm3sdfHVoL7bYH_jOyY84gri6u8RFP8TSPVbssLT71tQkl0dn-Vhm-QXzWSuS0tu62akegXd7xM2EOtvDYEMzhewf_S2hP3Ojk9HXMlQu_bi6qB0enq0BFHnWR1phDm7kevGpGWxcZ7KsZKiMhaO7bfJmK7vYdiAaTH7x0uk2iUctkVUUE487xZvge1RV8">
+                        </div>
+                        <h4>Sera Thorne</h4>
+                        <p class="role-tag">Creative Lead</p>
+                        <div class="social-icons">
+                            <span class="material-symbols-outlined">palette</span>
+                            <span class="material-symbols-outlined">forum</span>
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                    </div>
+                    <div class="architect-card">
+                        <div class="avatar-container">
+                            <div class="avatar-ring"></div>
+                            <img alt="Marcus Void" class="avatar-placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; padding: 4px; border: 4px solid transparent; transition: all 0.4s;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM1wNQm05Bb4cySlYAQ5w_fRriJ8F0wFm1yyfePjxg6FK1heqNf2_g-9b29hzAqcgqjzBaydiAv8Eic8YoKM3Jsv7dLlT4unHShJF5GZBA1baTpiEWVLTqKfaM0N5B0VYlxurdBfXd4mJ6HHLuXskBvc636xFBBRtRbk6rDs-BqMiAIiT-Q3GLri57muf8Ohb-85JzdpCssmxzoLUry6x6JmKWXeCSuMEn53l4HqTPURu18TzM3nw-Mj7DUpSszcjWu4X1MUeSw2o">
+                        </div>
+                        <h4>Marcus Void</h4>
+                        <p class="role-tag">Lead Engineer</p>
+                        <div class="social-icons">
+                            <span class="material-symbols-outlined">terminal</span>
+                            <span class="material-symbols-outlined">forum</span>
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Disamakan dengan Grid Horizontal Halaman Lain -->
+    <footer class="main-footer">
+        <div class="footer-grid-layout">
+            <div class="footer-brand-summary">
+                <div class="footer-brand-title">Clash of BaNG</div>
+                <p class="text-body-md">The ultimate fantasy combat experience. Strategize, deploy, and dominate the dark elixir realms.</p>
+                <div class="social-icon-row">
+                    <a href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a href="#"><span class="material-symbols-outlined">forum</span></a>
+                    <a href="#"><span class="material-symbols-outlined">share</span></a>
+                </div>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav-links-column">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter-column">
+                <h5>System Status</h5>
+                <div class="status-badge" style="display: flex; align-items: center; gap: 8px; padding: 8px 16px; background-color: #191f31; border: 1px solid rgba(221, 183, 255, 0.2); border-radius: 9999px; width: fit-content;">
+                    <span class="status-pulse" style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%;"></span>
+                    <span class="status-text" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #dce1fb;">SERVERS ONLINE</span>
+                </div>
+                <div class="footer-sub-bar" style="margin-top: 24px; padding: 0; border: none; text-align: left;">
+                    <span style="font-size: 11px; color: #988d9f;">&copy; 2026 CLASH OF BANG. ALL RIGHTS RESERVED.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
